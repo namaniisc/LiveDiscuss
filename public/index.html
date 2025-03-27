@@ -5,11 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LiveDiscuss</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
-    <h1>Hello LiveDiscuss</h1>
+    <div class="container">
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <h4><strong>🚀LiveDiscuss: Realtime Comment System</strong></h4>
+                <p>A fast and interactive real-time comment system powered by Node.js, Express, MongoDB, Socket.io, and Vanilla JavaScript. Comments appear instantly as users type—no refresh needed! Engage in smooth, live discussions effortlessly.</p>
+            </div>
+        </div>    
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <h4 class="border-bottom pb-2">Join the Conversation!</h4>
+            </div>
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="">🔹 Write a comment... (Your thoughts matter! 💡)</label>
+                    <textarea id="textarea" rows="3" class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="col-md-12">
+                <button id="submitBtn" class="btn btn-primary float-right">Post comment</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="typing text-success"></div>
+                <ul class="comment__box">
+                        <li class="comment">
+                        <div class="card border-light mb-3">
+                            <div class="card-body">
+                                <h6>Naman</h6>
+                                <p>This comment popped up instantly—cool, right? 😃</p>
+                                <div>
+                                    <img src="/img/clock.png" alt="clock">
+                                    <small>11:30 PM</small>
+                                </div>
+                            </div>
+                        </div>
+                    </li> 
+                    <li class="comment">
+                        <div class="card border-light mb-3">
+                            <div class="card-body">
+                                <h6>Amay</h6>
+                                <p>"Loving the real-time experience! 🚀"
+                                </p>
+                                <div>
+                                    <img src="/img/clock.png" alt="clock">
+                                    <small>11:301 PM</small>
+                                </div>
+                            </div>
+                        </div>
+                    </li> 
+                </ul>
+            </div>
+        </div>
+    </div>    
     <script src="/js/app.js"></script>
 </body>
 
