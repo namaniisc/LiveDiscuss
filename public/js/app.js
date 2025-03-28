@@ -1,6 +1,5 @@
 let username 
 let socket = io()
-
 do {
     username = prompt('Enter your name: ')
 } while(!username)
@@ -85,3 +84,27 @@ socket.on('typing', (data) => {
 textarea.addEventListener('keyup', (e) => {
     socket.emit('typing', { username })
 })
+
+function syncWithDb(data) {
+    const headers = {
+        'Content-Type': 'application/json'
+    }
+    fetch('/api/comments', { method: 'Post', body:  JSON.stringify(data), headers})
+        .then(response => response.json())
+        .then(result => {
+            console.log(result)
+        })
+}
+
+function fetchComments () {
+    fetch('/api/comments')
+        .then(res => res.json())
+        .then(result => {
+            result.forEach((comment) => {
+                comment.time = comment.createdAt
+                appendToDom(comment)
+            })
+        })
+}
+
+window.onload = fetchComments
