@@ -1,6 +1,4 @@
-Below is an example of a GitHub README file in Markdown format that summarizes the project based on the provided notes. You can copy and paste this into your repository's README.md file.
-
----
+![Demo](LiveDiscuss.gif)
 
 ```markdown
 # Real-Time Comment System
